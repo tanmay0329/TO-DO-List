@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Navbar from "./components/navbar";
+import Navbar from "./components/Navbar";
 import { v4 as uuidv4 } from "uuid";
 
 function App() {
@@ -27,7 +27,7 @@ function App() {
     saveToLS(updatedTODOs);
   };
 
-  const handleDelete = (e, id) => {
+  const handleDelete = (id) => {
     const updatedTODOs = TODOs.filter((item) => item.id !== id);
     setTODOs(updatedTODOs);
     saveToLS(updatedTODOs);
